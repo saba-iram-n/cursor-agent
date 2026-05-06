@@ -18,6 +18,9 @@ python3 -m pytest -q
 # 4) Run benchmark (no keys required)
 python3 benchmark/run_benchmark.py --baseline fixture
 
+# 4b) Launch execution UI (browser app)
+streamlit run ui/app.py
+
 # 5) Optional live benchmark (requires ANTHROPIC_API_KEY)
 # export ANTHROPIC_API_KEY="sk-ant-..."
 # python3 benchmark/run_benchmark.py --baseline live
@@ -33,6 +36,26 @@ git commit -m "Initial public release: Cursor support triage agent"
 git branch -M main
 git remote add origin <your-github-repo-url>
 git push -u origin main
+```
+
+## Execution UI
+This project includes a Streamlit execution screen at `ui/app.py`.
+
+Features:
+- Run single-ticket triage and view structured output
+- Clean dashboard cards for category, confidence, and benchmark summaries
+- Color-coded severity badges (`critical`, `high`, `medium`, `low`)
+- Benchmark results table with per-case scores and deltas
+- Run benchmark with baseline mode selection (`fixture`, `auto`, `live`, `cursor`)
+- View benchmark logs/output directly in the UI
+- See whether optional API keys are present in the current environment
+
+Launch:
+```bash
+cd /Users/sabairamn/MUST_agent/cursor-agent-performance-lab
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+streamlit run ui/app.py
 ```
 
 ## 1) Problem Specialization
@@ -140,6 +163,7 @@ The custom agent typically scores higher on deterministic security refusal and s
 - Deterministic rule-based core for reliability and explainability
 - Strict security-trigger handling for credential-related requests
 - Explicit scoring rubric to make evaluation auditable
+- Streamlit execution dashboard for non-terminal demos and review
 
 ### Usage
 ```bash
@@ -163,6 +187,7 @@ python3 benchmark/run_benchmark.py --baseline cursor
 - `benchmark/live_claude_predictions.latest.json` - latest live Claude baseline outputs (generated)
 - `benchmark/live_cursor_predictions.latest.json` - latest live Cursor baseline outputs (generated)
 - `benchmark/run_benchmark.py` - side-by-side evaluation
+- `ui/app.py` - Streamlit execution dashboard
 - `.cursorrules` - Cursor project behavior rules
 
 ## 7) GitHub / ZIP Delivery
