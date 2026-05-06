@@ -1,0 +1,48 @@
+### **Quest Requirements**
+
+### **1. Build Your Own Agent**
+
+- Create your own Agent that is **publicly shareable on GitHub**
+- Send us the GitHub repository link
+- **Alternative**: If making it public takes time, you can send it as a ZIP file
+- We understand that making code public may take time, and we fully support this
+
+### **2. Cursor-Based Setup**
+
+- **Your Agent MUST be configured to work with Cursor**
+- The entire project should be Cursor-ready
+- Include `.cursorrules` or appropriate Cursor configuration
+
+### **3. Security Requirements**
+
+- **Remove all sensitive information** (API keys, tokens, credentials, etc.)
+- Use environment variables or secure configuration files
+- Never commit secrets to the repository
+
+### **4. Performance Metrics**
+
+- **Create your own performance evaluation metrics**
+- Rate your Agent's performance on a scale from **1 to 10,000**
+- **You MUST include the calculation method** for how you determined the score
+- Explain how you measured performance
+
+### **5. Benchmark Comparison**
+
+- **Compare your Agent's performance with default Cursor's Claude performance**
+- Provide side-by-side comparison
+- Show where your Agent excels or differs
+- Include specific examples or test cases
+
+### **6. Problem Specialization**
+
+- **Explain what problem your Agent is specialized to solve**
+- **Why did you choose this problem?**
+- **Why was this problem your #1 priority?**
+- Provide clear reasoning for your problem selection
+
+### **7. Documentation**
+
+- Include comprehensive README.md
+- Document your Agent's capabilities
+- Explain your design decisions
+- Provide usage examples
