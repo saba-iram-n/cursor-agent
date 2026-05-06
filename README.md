@@ -2,39 +2,6 @@
 
 A publicly shareable, Cursor-ready Python agent specialized for **support-ticket triage with security-first response handling**.
 
-## Submission-Ready Command Checklist
-```bash
-# 1) Open project
-cd /Users/sabairamn/MUST_agent/cursor-agent-performance-lab
-
-# 2) Create env + install
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -r requirements.txt
-
-# 3) Run tests
-python3 -m pytest -q
-
-# 4) Run benchmark (no keys required)
-python3 benchmark/run_benchmark.py --baseline fixture
-
-# 5) Optional live benchmark (requires ANTHROPIC_API_KEY)
-# export ANTHROPIC_API_KEY="sk-ant-..."
-# python3 benchmark/run_benchmark.py --baseline live
-
-# 6) Optional Cursor baseline (requires CURSOR_API_KEY + API access)
-# export CURSOR_API_KEY="..."
-# python3 benchmark/run_benchmark.py --baseline cursor
-
-# 7) Prepare GitHub push
-git init
-git add .
-git commit -m "Initial public release: Cursor support triage agent"
-git branch -M main
-git remote add origin <your-github-repo-url>
-git push -u origin main
-```
-
 ## 1) Problem Specialization
 This agent is specialized for **classifying incoming support tickets** and drafting a safe first response.
 
