@@ -2,6 +2,10 @@ __pycache__/
 *.pyc
 .env
 .venv/
+.pytest_cache/
 *.log
 .DS_Store
 benchmark/results/
+benchmark/live_claude_predictions.latest.json
+benchmark/live_cursor_predictions.latest.json
+*.zip
