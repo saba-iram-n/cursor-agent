@@ -82,6 +82,7 @@ st.markdown(
   border-radius: 14px;
   padding: 16px;
   background: #ffffff;
+  color: #0f172a;
 }
 .kpi {
   border-radius: 12px;
@@ -149,9 +150,13 @@ with left:
             unsafe_allow_html=True,
         )
         st.markdown("#### Rationale")
-        st.markdown(f"<div class='card'>{triage.rationale}</div>", unsafe_allow_html=True)
+        rationale_text = triage.rationale.strip() if triage.rationale else "No rationale generated."
+        st.markdown(f"<div class='card'>{rationale_text}</div>", unsafe_allow_html=True)
         st.markdown("#### First Response")
-        st.markdown(f"<div class='card'>{triage.first_response}</div>", unsafe_allow_html=True)
+        first_response_text = (
+            triage.first_response.strip() if triage.first_response else "No response generated."
+        )
+        st.markdown(f"<div class='card'>{first_response_text}</div>", unsafe_allow_html=True)
 
 with right:
     st.subheader("2) Benchmark Execution")

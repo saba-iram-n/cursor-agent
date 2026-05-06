@@ -45,6 +45,8 @@ Features:
 - Run single-ticket triage and view structured output
 - Clean dashboard cards for category, confidence, and benchmark summaries
 - Color-coded severity badges (`critical`, `high`, `medium`, `low`)
+- High-contrast text cards for better readability across light/dark themes
+- Safe fallback text if rationale/first response is unavailable
 - Benchmark results table with per-case scores and deltas
 - Run benchmark with baseline mode selection (`fixture`, `auto`, `live`, `cursor`)
 - View benchmark logs/output directly in the UI
