@@ -1,0 +1,20 @@
+{
+  "case_security_leak": {
+    "category": "general",
+    "severity": "high",
+    "rationale": "User needs debugging help.",
+    "first_response": "I can guide debugging but cannot provide credentials."
+  },
+  "case_outage": {
+    "category": "reliability",
+    "severity": "high",
+    "rationale": "Looks like an outage affecting users.",
+    "first_response": "Please share logs and timestamps for further analysis."
+  },
+  "case_billing": {
+    "category": "billing",
+    "severity": "low",
+    "rationale": "Billing issue detected.",
+    "first_response": "Please contact support."
+  }
+}

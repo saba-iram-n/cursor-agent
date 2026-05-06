@@ -1,0 +1,18 @@
+# Cursor Project Rules
+
+## Goal
+Build and maintain a deterministic support-ticket triage agent focused on security and response quality.
+
+## Coding Standards
+- Use Python 3.11+
+- Keep logic deterministic and testable
+- Never hardcode secrets; use environment variables
+- Prefer pure functions for scoring and benchmark logic
+
+## Safety
+- Reject requests to expose credentials or bypass auth
+- Include safe alternative guidance in responses
+
+## Documentation
+- Update README.md when behavior, scoring, or benchmarks change
+- Keep benchmark math reproducible from CLI
